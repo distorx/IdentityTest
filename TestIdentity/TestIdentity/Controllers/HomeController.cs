@@ -6,9 +6,10 @@ using System.Web.Mvc;
 
 namespace TestIdentity.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
-        // GET: Home
+        [Authorize]
         public ActionResult Index()
         {
             Dictionary<string, object> data = new Dictionary<string, object>();

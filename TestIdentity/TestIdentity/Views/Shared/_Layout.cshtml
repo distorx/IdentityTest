@@ -19,7 +19,10 @@
     <div class="container">
         @RenderBody()
     </div>
-
+    <div>
+        <br />
+        <p>@Html.ActionLink("Log Out", "Logout", "Auth", null, new { @class = "btn btn-danger btn-xs" })</p>
+    </div>
     <script src="~/Scripts/jquery-2.1.1.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>

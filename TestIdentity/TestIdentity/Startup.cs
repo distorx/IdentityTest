@@ -2,8 +2,6 @@
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
-using System;
-using System.Threading.Tasks;
 using TestIdentity.Infrastructure;
 
 namespace TestIdentity

@@ -8,6 +8,7 @@ using TestIdentity.Models;
 
 namespace TestIdentity.Controllers
 {
+    [Authorize()]
     public class AdminController : Controller
     {
         public ActionResult Index()
