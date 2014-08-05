@@ -15,6 +15,9 @@ namespace TestIdentity.Controllers
     {
         [AllowAnonymous]
         public ActionResult Login(string returnUrl) {
+            if (HttpContext.User.Identity.IsAuthenticated) {
+                return View("Error", new string[] { "Access Denied" });
+            }
             ViewBag.returnUrl = returnUrl;
             return View();
         }
@@ -42,7 +45,7 @@ namespace TestIdentity.Controllers
         }
 
         public ActionResult Logout() {
-            AuthManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            AuthManager.SignOut();
             return RedirectToAction("Index", "Home");
         }
 
